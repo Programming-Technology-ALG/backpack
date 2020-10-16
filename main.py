@@ -24,6 +24,12 @@ def merge(list1, list2):
     return [(list1[i], list2[i]) for i in range(len(list1))]
 
 
+def printArr(arr):
+    for i in range(n):
+        print(arr[i])
+    return
+
+
 def discrete_algorithm1(mk: int, wc):
     a = [[0] * mk for k in range(n)]
     for i in range(n):
@@ -35,6 +41,7 @@ def discrete_algorithm1(mk: int, wc):
                     a[i][j] = a[i - 1][j]
             elif j >= wc[i][0]:
                 a[i][j] = wc[i][1]
+    # printArr(a)
     return a[n - 1][m - 1]
 
 
